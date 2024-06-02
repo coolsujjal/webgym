@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signin page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* google popins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Default syling in every page also of navbar. */
+/* * {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    font-family: Poppins;
+    background-color: #121511;
+        color: white;
+
+    /* color: rgb(0, 255, 0); */
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', ; */
+/* }
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+} */
+* {
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+}
+
+body {
+    background-color: #121212;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 94vh;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 100px 20px 0px 20px;
+    width: 50%;
+}
+
+.info-box {
+    background-color: #4a4a4a;
+    color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+}
+
+.right-side {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 100px 40px 0px 40px;
+    width: 50%;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form h1 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.signup-form p {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.signup-form label {
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.signup-form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+.signup-form button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.signup-form button:hover {
+    background-color: darkgreen;
+}
+
+.social-login {
+    display: flex;
+    justify-content: space-between;
+}
+
+.google-btn,
+.facebook-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a4a4a;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.google-btn:hover {
+    background-color: red;
+}
+
+.facebook-btn:hover {
+    background-color: #3b5998;
+}
+
+.google-btn:last-child,
+.facebook-btn:last-child {
+    margin-right: 0;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+            <div id="r-nav">
+                <div class="dropdown">
+                    <input type="checkbox" id="dropdown-toggle" />
+                    <label for="dropdown-toggle" class="dropdown-btn">
+                        <div class="lang">Eng</div>
+                        <i class="ri-arrow-drop-down-line"></i>
+                    </label>
+
+                    <div class="dropdown-content">
+                        <a href="#Nepali">Nep</a>
+                        <a href="#Hindi">Hindi</a>
+                        <a href="#Spanish">Spanish</a>
+                    </div>
+                </div>
+
+                <div class="nav">
+                    <ul>
+                        <li><a href="../pages/photo-gallery.html">Discover</a></li>
+                        <li><a href="../pages/pricing.html">Equipment</a></li>
+                        <!-- <li><a href="#additional-info">Why Us</a></li>
+                    <li><a href="#about">Program</a></li>
+                    <li><a href="#newsletter">Contact</a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../../media/logo.png" alt="saroj gym">
+                    <div class="sarojgym"><b class="logo-saroj">SALMON GYM</div>
+                </a>
+            </div>
+            <div class="log-sign">
+                <div class="ph-no">+977-9804025511</div>
+                <div class="member">
+                    <div class="already-mem">Already a member</div>
+                    <a href="../../src/index.html">
+                        <div class="login">
+                        <button>login</button>
+                    </a>
+                </div>
+            </div>
+            <!-- <a href="signin.html">
+                <div class="signup"><button>signup</button></div>
+                </a> -->
+        </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="container">
+            <div class="left-side">
+                <div class="info-box">
+                    <h2>Own your power</h2>
+                </div>
+                <div class="info-box">
+                    <h2>Total Care. Total Different.</h2>
+                </div>
+                <div class="info-box">
+                    <h2>Building trust in blockchain technology</h2>
+                </div>
+            </div>
+            <div class="right-side">
+                <form class="signup-form">
+                    <h1>Sign Up</h1>
+                    <p>Sign up to get access to exclusive gym facilities and programs</p>
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="First Name">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last Name">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <button type="submit">Log In</button>
+                    <div class="social-login">
+                        <button class="google-btn">Google</button>
+                        <button class="facebook-btn">Facebook</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+   
+<!-- 
+    <div class="box">
+        <form action="">
+            <h2>signin</h2>
+            <div class="inputbox">
+                <input type="text" required="required">
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div class="inputbox">
+                <input type="password" required="required">
+                <span>Password</span>
+                <i></i>
+
+            </div>
+            <div class="links">
+                <a href="#">Forgot Password</a>
+                <a href="#signup"></a>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+    </div> -->
+
+</main>
+
+
+
+</body>
+
+</html>
