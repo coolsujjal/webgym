@@ -120,9 +120,64 @@
                 <!-- Add more photos as needed -->
             </div>
         </div>
+         <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+        <a class="prev" onclick="changePhoto(-1)">&#10094;</a>
+        <a class="next" onclick="changePhoto(1)">&#10095;</a>
+    </div>
 
 </main>
-   
+   <script>
+    // scripts.js
+
+document.addEventListener("DOMContentLoaded", function() {
+    const photos = document.querySelectorAll(".photo img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const close = document.querySelector(".close");
+    let currentIndex = 0;
+
+    function showLightbox(index) {
+        currentIndex = index;
+        lightbox.style.display = "block";
+        lightboxImg.src = photos[index].src;
+        lightboxCaption.innerText = photos[index].alt;
+    }
+
+    function changePhoto(direction) {
+        currentIndex += direction;
+        if (currentIndex < 0) {
+            currentIndex = photos.length - 1;
+        } else if (currentIndex >= photos.length) {
+            currentIndex = 0;
+        }
+        lightboxImg.src = photos[currentIndex].src;
+        lightboxCaption.innerText = photos[currentIndex].alt;
+    }
+
+    photos.forEach((photo, index) => {
+        photo.addEventListener("click", () => showLightbox(index));
+    });
+
+    close.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    document.querySelector(".prev").addEventListener("click", () => changePhoto(-1));
+    document.querySelector(".next").addEventListener("click", () => changePhoto(1));
+
+    lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+});
+
+   </script>
 </body>
 
 </html>
